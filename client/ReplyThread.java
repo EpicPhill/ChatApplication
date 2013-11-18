@@ -46,8 +46,4 @@ public class ReplyThread extends Thread {
 		outChannel.println("//disconnect//");
 	}
 	
-	public void setOK(){
-		ok = true;
-	}
-	
 }

@@ -6,12 +6,13 @@ import java.util.ArrayList;
 public class Server{
 
 	private ServerSocket socket;
-	private int port = 1117;
+	private ConnectionThread connectionThread;
+	private int port;
 	
 	private ArrayList<MessageThread> messageThreads = new ArrayList<MessageThread>();
 	private ArrayList<OutgoingThread> outgoingThreads = new ArrayList<OutgoingThread>();
 	private ArrayList<ArrayList<String>> outgoing = new ArrayList<ArrayList<String>>();
-	private ConnectionThread connectionThread;
+	
 	
 	public static void main(String[] args){
 		if (args.length != 1){

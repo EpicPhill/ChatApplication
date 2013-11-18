@@ -35,6 +35,8 @@ public class ConnectionThread extends Thread {
 			} catch (Exception e){
 				System.err.println("output stream could not be opened");
 			}
+			
+			//remove all the terminated threads and add the new ones to the first empty spot
 			for (int i = messageThreads.size()-1;  i >= 0; i--){
 				if (messageThreads.get(i).getRunning() == false){
 					messageThreads.remove(i);

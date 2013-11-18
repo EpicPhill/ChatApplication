@@ -5,7 +5,6 @@ public class MessageThread extends Thread {
 	private BufferedReader inChannel;
 	private boolean running = true;
 	private String output = null;
-	private boolean ok = false;
 	
 	private Client client;
 	
@@ -43,14 +42,6 @@ public class MessageThread extends Thread {
 
 	public void terminate(){
 		running = false;
-	}
-	
-	public String getOutput(){
-		return output;
-	}
-	
-	public boolean getOK(){
-		return ok;
 	}
 	
 }
