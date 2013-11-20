@@ -12,7 +12,7 @@ public class Client {
 	private String hostname = "localhost";
 	private int port = 1117;
 	private ReplyThread message;
-	private MessageThread incoming;
+	private ChatThread incoming;
 	private boolean ok = false;
 	
 	public static void main(String[] args){
@@ -61,7 +61,7 @@ public class Client {
 		System.out.println();
 		
 		message = new ReplyThread(out, this);
-		incoming = new MessageThread(in, this);
+		incoming = new ChatThread(in, this);
 		message.start();
 		incoming.start();
 	}
